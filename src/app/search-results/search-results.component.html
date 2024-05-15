@@ -1,0 +1,8 @@
+<div class="set-container">
+  <div *ngFor="let set of results" class="set-card" (click)="selectSet(set)">
+    <div class="set-info">
+      <button class="btn"><h3 class="h3-class">{{ set.name }}</h3></button>
+      <p class="p-class">{{ set.block }} - {{ set.releaseDate }}</p>
+    </div>
+  </div>
+</div>

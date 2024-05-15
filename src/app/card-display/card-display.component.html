@@ -1,0 +1,12 @@
+<div class="card-container">
+  <div *ngFor="let card of cards | keyvalue" class="card">
+    <img [src]="card.value.imageUrl" alt="{{ card.value.name }}" class="card-image">
+    <div class="card-details">
+      <h3 class="card-name">{{ card.value.name }}</h3>
+      <p class="card-color-identity">{{ card.value.colorIdentity }}</p>
+      <p class="card-text">{{ card.value.text }}</p>
+      <p class="card-mana-cost">{{ card.value.manaCost }}</p>
+    </div>
+  </div>
+</div>
+  

@@ -1,0 +1,18 @@
+<div class="search-container">
+  <form class="search-form" (ngSubmit)="search()">
+    <input class="search-input" [(ngModel)]="name" name="name" placeholder="Nome da Coleção">
+    <select class="search-select" [(ngModel)]="block" name="block">
+      <option class="search-option" value="Amonkhet">Amonkhet</option>
+      <option class="search-option" value="Ixalan">Ixalan</option>
+      <option class="search-option" value="Zendikar">Zendikar</option>
+      <option class="search-option" value="Ravnica">Ravnica</option>
+      <option class="search-option" value="Onslaught">Onslaught</option>
+    </select>
+    <button class="search-button" type="submit">Pesquisar</button>
+  </form>
+  <app-search-results class="search-results" [results]="results" (setSelected)="setSelectedSet($event)"></app-search-results>
+
+  <app-creature-type [cards]="boosterCards" (filteredCards)="onFilteredCreatureCards($event)"></app-creature-type>
+
+  <app-card-display class="card-display" [cards]="boosterCards"></app-card-display>
+</div>
